@@ -172,6 +172,7 @@ class App extends Component {
                             <h2>List of my favorite beer in the world</h2>
                             <MyBeerListComponent beerList={this.state.myBeerList}/>
                             {this.state.myBeerList !== null && this.state.myBeerList.length > 0 ? <div className="btn" onClick={evt => this.removeAll(evt)}>Remove all them beers</div> : ''}
+                            <div className="btn" onClick={evt => this.showMyList(evt)}>Close the list</div>
 
                         </div>
                     </div> : ''}
