@@ -1,0 +1,213 @@
+body {
+
+  background-color: #ffe589;
+}
+
+h1, h2, h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  text-align: start;
+  color: #2f2f2f;
+}
+
+header {
+  padding: 0 0 0 2em;
+}
+hr {
+  margin: 10px 0 10px 0;
+  background-color: #000;
+  height: 1px;
+  border-style: none;
+  opacity: 0.1;
+  width:100%;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+
+.foam {
+  padding: 0 0 0 2em;
+  background-color: #fff;
+  height: 100px;
+  filter: blur(10px);
+
+}
+
+
+.beer-btn {
+  height: 256px;
+  width: 256px;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.15), 0 2px 10px 0 rgba(0,0,0,0.1);
+  transition: box-shadow .2s, background-color .2s, transform .2s;
+  margin:16px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  cursor: pointer;
+
+}
+
+.beer-btn:hover {
+  background-color: rgb(239, 239, 239);
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.25), 0 2px 10px 0 rgba(0,0,0,0.1);
+  transform: scale(1.03);
+
+}
+
+
+.beer-btn img {
+  width: 128px;
+  height: 128px;
+
+}
+
+.dialog-popup {
+  display: flex;
+  position: fixed;
+  background-color: rgba(0,0,0,0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  background-color: #FFF;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.15), 0 2px 10px 0 rgba(0,0,0,0.1);
+  padding: 8px 8px 16px 8px;
+  transition: box-shadow .2s, transform .2s;
+  margin:16px;
+
+  z-index: 0;
+  opacity: 1;
+
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: .2s;
+  display:flex;
+  flex-direction: column;
+  max-width: 600px;
+  min-width: 300px;
+  min-height: 300px;
+
+}
+
+.btn{
+  margin:auto;
+  max-width: 250px;
+  height: 36px;
+  text-align: center;
+  padding: 0 1rem;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  vertical-align: middle;
+  line-height: 36px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  border-radius: 18px;
+  color: #f7a71d;
+  transition: box-shadow .2s, background-color .2s;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+
+}
+
+
+.beer-card {
+
+}
+
+.inner-beer-list{
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.inner-beer-list-element {
+  padding: 16px;
+
+}
+
+.inner-beer-list h3 {
+  margin: 0;
+}
+
+
+.flex-align-items-center {
+  justify-content: center;
+}
+
+
+.fixed-btn  {
+  border-radius: 50%;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.15), 0 2px 10px 0 rgba(0,0,0,0.1);
+  background-color: #FFF;
+  height:64px;
+  width: 64px;
+  color: white;
+  margin: 16px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  line-height: 32px;
+  font-weight: 400;
+  transition: box-shadow .2s, opacity .2s;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.fixed-btn:hover {
+  background-color: rgb(239, 239, 239);
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.25), 0 2px 10px 0 rgba(0,0,0,0.1);
+  transform: scale(1.03);
+
+}
+
+.fixed-btn h1 {
+  text-align: center;
+  margin: auto;
+  line-height: 2em;
+}
+
+
+/**animations**/
+
+.fade-in {
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: .3s;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotating {
+  animation: spin infinite 5s linear;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
