@@ -4,6 +4,16 @@ import './App.css';
 
 import beerImg from './res/beer-outline-filled.png'
 
+/**
+ * @author Edvard Pires Bjørgen
+ *
+ * This component renders the inner list element in the current beer, it takes a beer object in as prop.
+ * This prop is connected to the "currentBeer"-state in RandomBeerComponent. When the "currentBeer"-state is updated in
+ * RandomBeerComponent the currentBeer in this component changes accordingly.
+ *
+ *
+ */
+
 class BeerComponent extends Component {
 
 
@@ -13,6 +23,11 @@ class BeerComponent extends Component {
         }
     }
 
+    /**
+     * This renders the inner element of the current
+     *
+     * @returns {*}
+     */
     render() {
 
         const currentBeer = this.props.beer[0];
