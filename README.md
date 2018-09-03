@@ -1,7 +1,7 @@
 # INFO212 Simple React App - Random Beers and how to save them
 This is a basic web application written in React.js.
 
-The app takes in a random beer from an [open REST API of random PUNK beers](https://punkapi.com/), it allows the user to save the random beers in a personal list that is saved in the browser. 
+The app takes in a random beer from an [open REST API of PUNK beers](https://punkapi.com/), it allows the user to save the random beers in a personal list that is saved in the browser. 
 
 The code is commented, but if there are any questions send me a mail at: **edvard.bjorgen@uib.no**
 
