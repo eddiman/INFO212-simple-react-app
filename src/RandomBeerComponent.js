@@ -36,7 +36,7 @@ class RandomBeerComponent extends Component {
  * For more info on React Component's lifecycle see: https://reactjs.org/docs/react-component.html
  *
  * **/
-    componentDidMount() {
+    componentWillMount() {
         this.fetchData();
 
         this.loadDatafromLocalStorage();
@@ -239,7 +239,9 @@ class RandomBeerComponent extends Component {
                 <div className="container flex-align-items-center ">
 
                     {!this.state.isLoading ? <div className="card fade-in beer-card">
+
                         <BeerComponent beer={this.state.currentBeer}/>
+
                         <div className="btn" onClick={evt => this.addBeerToList(evt)}>Add to my beer list</div>
                     </div>: ''}
 
@@ -253,9 +255,13 @@ class RandomBeerComponent extends Component {
                 {this.state.isShowingList ?
                     <div className="dialog-popup fade-in">
                         <div className="card fade-in ">
+
                             <h2>List of my favorite beer in the world</h2>
+
                             <MyBeerListComponent beerList={this.state.myBeerList}/>
+
                             {this.state.myBeerList !== null && this.state.myBeerList.length > 0 ? <div className="btn" onClick={evt => this.removeAll(evt)}>Remove all them beers</div> : ''}
+
                             <div className="btn" onClick={evt => this.showMyList(evt)}>Close the list</div>
 
                         </div>
